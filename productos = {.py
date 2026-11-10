@@ -1,8 +1,8 @@
 
 # Parcial 3 - Logica de Programacion
-# Integrantes: Jeremy Antoine Sotelo Scarpetta y Samuel Ayala Quinche
+# Integrantes: Jeremy Antoine Sotelo Scarpetta y Emily Mejia Guzman
 
-# 1. Diccionario de productos con tuplas
+
 productos = {
     1: ("Cafe", 3000, 20),
     2: ("Jugo natural", 5000, 15),
@@ -12,7 +12,7 @@ productos = {
 }
 
 
-# 2. Funcion para mostrar el catalogo
+
 def mostrar_productos(productos):
     print("\n========== CATALOGO DE PRODUCTOS ==========")
     print("Codigo | Producto       | Precio | Existencias")
@@ -23,7 +23,7 @@ def mostrar_productos(productos):
         print(f"{codigo:<6} | {nombre:<14} | ${precio:<6} | {existencias}")
 
 
-# 3. Funcion para registrar productos
+
 def registrar_producto(productos, pedido, codigo, cantidad):
 
     if codigo not in productos:
@@ -51,7 +51,7 @@ def registrar_producto(productos, pedido, codigo, cantidad):
     print(f"{nombre} agregado correctamente al pedido.")
 
 
-# 4. Funcion para calcular el total
+
 def calcular_total(pedido):
 
     total = 0
@@ -62,7 +62,7 @@ def calcular_total(pedido):
     return total
 
 
-# 5. Funcion para mostrar el resumen del pedido
+
 def mostrar_resumen(pedido):
 
     print("\n========== RESUMEN DEL PEDIDO ==========")
@@ -74,7 +74,7 @@ def mostrar_resumen(pedido):
 
     total = calcular_total(pedido)
 
-    # Aplicar descuento del 10% si cumple la condicion
+   
     if total >= 50000:
         descuento = total * 0.10
     else:
@@ -83,12 +83,12 @@ def mostrar_resumen(pedido):
     total_final = total - descuento
 
     print("----------------------------------------")
-    print(f"Total: ${total:.0f}")
-    print(f"Descuento: ${descuento:.0f}")
-    print(f"TOTAL A PAGAR: ${total_final:.0f}")
+    print(f"Total: ${total:}")
+    print(f"Descuento: ${descuento:}")
+    print(f"TOTAL A PAGAR: ${total_final:}")
 
 
-# 6. Programa principal: menu de la cafeteria
+
 def cafeteria():
 
     pedido = []
@@ -137,6 +137,6 @@ def cafeteria():
             print("Opcion no valida.")
 
 
-# Ejecutar el programa
+
 cafeteria()
 
